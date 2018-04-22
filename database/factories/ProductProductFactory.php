@@ -13,6 +13,6 @@ $factory->define(App\Product\Product::class, function (Faker $faker) {
         'user_id'=>function(){
             return User::all()->random();
         },
-        'img'=>$faker->word,
+        'img'=>$faker->numberBetween(1,18) . ".png",
     ];
 });

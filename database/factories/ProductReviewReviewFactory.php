@@ -5,7 +5,7 @@ use App\Product\Product;
 
 $factory->define(App\Product\Review\Review::class, function (Faker $faker) {
     return [
-        'customer_id'=>function(){
+        'product_id'=>function(){
             return Product::all()->random();
         },
         'customer' => $faker->name,

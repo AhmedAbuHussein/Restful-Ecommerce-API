@@ -17,4 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/item/{id}', 'HomeController@item');
+Route::get('/users','AjaxController@users');
+Route::get('/profile/{id}','HomeController@profile');
+Route::get('/additem','HomeController@additem')->middleware('auth');
+Route::post('/saveimage','HomeController@saveImage');
